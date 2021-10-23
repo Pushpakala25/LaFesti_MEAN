@@ -1,0 +1,173 @@
+<app-header></app-header>
+<html class="fs">
+    <div class="title">
+        <h4>Restaurants</h4>
+    </div>
+    <label class="head2">
+        <h1>&nbsp;Customer Favorites</h1>
+    </label>
+    <div class="row">
+        <div class="column">
+            <img src="https://drive.google.com/uc?export=view&id=1k_IcywjXfKuMnr7DVdAQZAEnBhhJTibw" alt="Loading"
+                style="width:100%">
+        </div>
+        <div class="column">
+            <img src="https://drive.google.com/uc?export=view&id=1blLn-8lzKbIEYn3hMBwTbIsX-XF0UZZe" alt="Loading"
+                style="width:100%">
+        </div>
+        <div class="column">
+            <img src="https://drive.google.com/uc?export=view&id=1SylEH5J47GXHrDF7B2YKMYpde4sCjEkY" alt="Loading"
+                style="width:100%">
+        </div>
+        <div class="column">
+            <img src="https://drive.google.com/uc?export=view&id=1UwqTRmJik674c4AkKTgikarni45zq0xt" alt="Loading"
+                style="width:100%">
+        </div>
+    </div>
+
+    <label class="head2">
+        <h1>&nbsp;Popular Restaurants</h1>
+    </label>
+
+    <div class="all-popular">
+        <div class="responsive1">
+            <div class="gallery">
+                <a routerLink="/menu">
+                    <img src="https://drive.google.com/uc?export=view&id=1rSkb7O2gCc8XPU19k2y0AsV6YiEutHGl"
+                        alt="Loading">
+                </a>
+                <div class="desc">BEST IN Pizza</div>
+            </div>
+        </div>
+        <div class="responsive1">
+            <div class="gallery">
+                <a routerLink="/menu">
+                    <img src="https://drive.google.com/uc?export=view&id=1a5ZkMvqybZ8aNH44FFOFfW5VvHEnRANq"
+                        alt="Loading">
+                </a>
+                <div class="desc">BEST IN FRAPPE</div>
+            </div>
+        </div>
+        <div class="responsive1">
+            <div class="gallery">
+                <a routerLink="/menu">
+                    <img src="https://drive.google.com/uc?export=view&id=1wFi8srjCHqF9O06T3MIK0WrmglJ2avs0"
+                        alt="Loading">
+                </a>
+                <div class="desc">BEST IN BURGERS</div>
+            </div>
+        </div>
+        <div class="responsive1">
+            <div class="gallery">
+                <a routerLink="/menu">
+                    <img src="https://drive.google.com/uc?export=view&id=15ykdV4_TXx_bT3-p6kFBFnLJ7u2nMewz"
+                        alt="Loading">
+                </a>
+                <div class="desc">BEST IN MOMOS</div>
+            </div>
+        </div>
+    </div>
+  
+    <label class="head2">
+        <h1>&nbsp;Choose Your Restaurants Here</h1>
+    </label>
+   
+
+    <div class="first-section">
+        <section class="filter_button">
+            <button class="button" (click)="sortByCuisines()">Cuisines &nbsp; &nbsp; &nbsp; <i class="fas fa-utensils"></i></button>
+            <button class="button" (click)="sortByReviews()">Reviews &nbsp;&nbsp;&nbsp; <i class="fas fa-comment-dots"></i>
+                </button>
+            <button class="button" (click)="sortByRating()">Rating:4.0 &nbsp; <i class="fas fa-star-half-alt"></i> </button>
+    
+            <button class="button" (click)="sortByDeliveryTime()">Delivery Time&nbsp;<i class="fas fa-biking"></i> </button>
+            <div class="veg">
+                <h5>Veg</h5>
+            </div>
+    
+            
+        </section>
+        
+    
+        <div class="switch_search">
+           <!-- <label class="veg">Veg Only</label> -->
+            <label class="_switch">
+                <input type="checkbox" (change)="filterByVegOnly($event)">
+                <span class="slider"></span>
+            </label>
+        </div>
+    
+    </div>
+    <br>
+<br>
+
+    <div class="all-restaurants" *ngFor="let R of rest">
+        <div class="responsive">
+            <div class="hotels" >
+                <a routerLink="/menu">
+                    <img [src]="R.Image"
+                        alt="Loading" width="600px" height="600px">
+                </a>
+                <b>
+                    <div class="hotels_name">{{R.Name}}</div>
+                </b>
+
+                <div class="hotels_ratings" [ngSwitch]="R.Rating">
+                    <div *ngSwitchCase="5">&#9733; &#9733; &#9733;&#9733;&#9733;</div>
+                    <div *ngSwitchCase="4">&#9733; &#9733; &#9733;&#9733;&#9734;</div>
+                    <div *ngSwitchCase="3">&#9733; &#9733; &#9733;&#9734;&#9734;</div>
+                    <div *ngSwitchCase="2">&#9733; &#9733; &#9734;&#9734;&#9734;</div>
+                    <div *ngSwitchCase="1">&#9733; &#9734;&#9734;&#9734;&#9734;</div>
+                    
+                </div>
+                <div class="hotels_reviews"> ({{R.Reviews}} Reviews) </div>
+              
+                <div class="hotels_desc"><span>{{R.Cuisine}}</span> <span> &#8901; {{R.DeliveryTime}}</span></div>
+            </div>
+        </div>
+        </div>
+
+
+    <div class="navbar">
+        <a href="#" class="active">1</a>
+        <a href="#"(click)="sortByDeliveryTime()">2</a> 
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <label class="head2">
+        <h1>Food delivery from best restaurants</h1>
+    </label>
+    <label class="cate"><p>La Festi helps you find and order food from wherever you are.
+        How it works: you type in an address, we tell you the restaurants that deliver to that location.
+        Want to be more specific? Search by cuisine, restaurant name or menu item. We'll filter your results
+        accordingly.
+        When you find what you're looking for, you can place your order online or by phone, free of charge.
+        Oh, and we also give you access to reviews, coupons, special deals and a 24/7 customer care team that
+        tracks each order and m
+        akes sure you get exactly what you want.</p>
+    </label>
+
+    <br>
+
+    <label class="head2">
+        <h1>Explore the best restaurants in Chennai from your comfort zone</h1>
+    </label>
+    <label class="cate">
+        <p>Order food & beverages online from restaurants near & around you. We deliver food from your neighborhood local joints, 
+            your favorite cafes, luxurious & elite restaurants in your area. Exciting bit? The meals you love, delivered with care. You want 
+            it? We get it.We place no minimum order restrictions! Order in as little (or as much) as you?d like. We?ll Feast it to you!</p>
+    </label>
+
+
+
+
+
+</html>
+
+<app-footer></app-footer>

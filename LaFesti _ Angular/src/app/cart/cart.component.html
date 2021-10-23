@@ -1,0 +1,285 @@
+<app-header></app-header>
+<!-- <p>c2 works!</p> -->
+
+
+<div class="summary_01">
+    <h4>Order Summary</h4>
+ </div>
+
+
+
+ <div>
+
+
+    
+    <div class="Food-cart">
+    <!-- Title -->
+    <div class="title">
+      YOUR FOOD BAG 
+    </div>
+   
+    <!-- Product #1 -->
+    
+    <div class= "item" >
+      
+      <div class= "buttons">
+        <span class= "delete-btn"></span>
+        <span class= "like-btn"></span>  
+      </div>
+      
+       <div class="image">
+        <img src={{carts.IMG}}/>
+       </div> 
+
+      <div class= "description">        
+        <span>{{carts.Name}}</span>
+       
+        
+      </div>
+   
+      <div class= "quantity">
+        <button class="plus-btn" type="button" name="button">
+         <span >&#43;</span> 
+        </button>
+        <input type="text" name="name" value="1">
+        <button class="minus-btn" type="button" name="button">
+          <span >&#8722;</span> 
+        </button>
+      </div>
+   
+      <div class="total-price">{{carts.Price}}</div>
+    </div>
+   <!--
+    Product #2
+    <div class="item">
+      <div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </div>
+   
+      <div class="image">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2020/12/fried-rice.jpg"/>      </div>
+
+      <div class="description">
+        <span>Vegetable rice</span>
+        <span>Special</span>
+        <span>2</span>
+      </div>
+   
+      <div class="quantity">
+        <button class="plus-btn" type="button" name="button">
+          <span >&#43;</span> 
+        </button>
+        <input type="text" name="name" value="1">
+        <button class="minus-btn" type="button" name="button">
+          <span >&#8722;</span> 
+        </button>
+      </div>
+   
+      <div class="total-price">Rs.300</div>
+    </div> 
+   
+     Product #3 
+    <div class="item">
+      <div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </div>
+
+   
+      <div class="image">
+        <img src="https://i2.wp.com/1.bp.blogspot.com/-Hpx_7O4GiiM/XrL8jCpld-I/AAAAAAAAJ0U/OkxipmhU3fo0hIOKCT1ftkqiekOlQtXkQCLcBGAsYHQ/s1600/Gobi%2BManchurian%2BRecipe.JPG?w=1170&ssl=1" />
+      </div>
+   
+      <div class="description">
+        <span>Gobi Munchirian</span>
+        <span>Semi Dry</span>
+        <span>2</span>
+      </div>
+   
+      <div class="quantity">
+        <button class="plus-btn" type="button" name="button">
+          <span >&#43;</span> 
+        </button>
+        <input type="text" name="name" value="1">
+        <button class="minus-btn" type="button" name="button">
+          <span >&#8722;</span> 
+        </button>
+      </div> -->
+   
+      
+     
+
+        
+      </div>
+      
+      
+<div>
+
+
+  <div class="h">
+        
+<a  href="#1">Confirm order</a>
+</div>
+
+
+</div>
+</div>
+
+
+<br>
+<br>
+
+
+
+<div class="Total_01" >
+  <H1>Total Rs.<b>{{carts.Price}} </b>  </H1><br><br>
+
+            
+</div>
+
+
+<div class="summary_02">
+
+<h4>Offers</h4>
+
+
+
+
+   
+</div>
+
+<div>     
+
+
+</div>
+
+<div  id="1" class="row">
+<div class="column">
+  <button type="button" class ="bttn" [disabled]="clicked"  (click)="dicsount1(); clicked = true;"><img src="https://drive.google.com/uc?export=view&id=10VZAiz0W1UTYw-jKGieVynWIfUiyS9q3" alt="Loading"
+    style="width:100%"    >
+  </button>
+          
+</div>
+<div class="column">
+     <img src="https://drive.google.com/uc?export=view&id=1JQP103u1gsjxqQmr18XO0n6Q-S2zK_Ks" alt="Loading"
+          style="width:100%" >
+</div>
+<div class="column">
+     <img src="https://www.downloadclipart.net/large/discount-png-clipart.png" alt="Loading"
+          style="width:100%" >
+</div>
+<div class="column">
+     <img src="https://drive.google.com/uc?export=view&id=1I4M99brJUsAVlN5xH7EknHOFibiFECaF" alt="Loading"
+          style="width:100%">
+</div>
+</div>
+<div class="container">
+<span  class="closebtn"></span>
+<img id="expandedImg" style="width:100%">
+<div id="imgtext"></div>
+</div>
+
+
+
+
+
+
+<!-- PROMO CODE  -->
+
+
+<div class ="promo">
+  <form  [formGroup] = "promos" >
+   
+  
+    <div *ngIf="name.errors" >
+     
+      <h6   *ngIf="name.touched && name.errors.required" style="color: crimson;">
+        ENTER A VALID PROMO CODE 
+    </h6>
+      
+      </div>
+  
+  
+    <input type="text" id="promon" formControlName= "name" placeholder = "   ENTER  PROMO CODE ">
+   
+    
+    <input type="submit" (click)="discountval()" value="REDEEM" class="btn">
+  
+    
+    </form>
+  </div>
+<h1 id="1" > . </h1>
+
+
+
+<!-- payment screen -->
+
+<section class="pay">
+
+<div class="payment_01">
+  <h4>Payment</h4>
+  
+
+  <div  id="1" class="row">
+    
+    <div class="column">
+<br>
+      
+         <img src="https://drive.google.com/uc?export=view&id=15Pcr3efy2UcmMIb-k-t0iEt9zT0vpVDM"Loading
+              style="width:60%">
+              <br>
+              
+    </div>
+    <div class="column">
+<br>
+         <img src="https://skyfitnepal.com/_next/static/images/cod-ff667961b35dde6d9ac1389514c3ede2.png" alt="Loading"
+              style="width:60%" >
+              
+    </div>
+    <div class="column">
+<br>
+         <img src="https://icons-for-free.com/iconfiles/png/512/credit+card+debit+card+master+card+icon-1320184902602310693.png" alt="Loading"
+              style="width:70%" >
+    </div>
+    <div class="column">
+      <br>
+
+      <img src="https://1000logos.net/wp-content/uploads/2020/04/Google-Pay-Logo.png" alt="Loading"
+           style="width:89%" >
+ </div>
+
+   
+  </div>
+ 
+  
+
+
+</div>
+
+
+
+
+<div class="PAY_01">
+<a  routerLink="/pay">Pay Now</a><br><br>
+</div>
+
+</section>
+
+
+<script>
+var navLinks = document.getElementById("navLinks");
+function showMenu(){
+    navLinks.style.right="0";
+}
+function hideMenu(){
+    navLinks.style.right="-200px";
+}
+</script>
+
+<app-footer></app-footer>
+
+
+
+ 
+

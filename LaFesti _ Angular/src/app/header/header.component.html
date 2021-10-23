@@ -1,0 +1,37 @@
+<!-- <p>header works!</p> -->
+<header>
+    <div class="nav_container">
+        <nav class="nav_checkbox">
+            <a routerLink="/Home" class="logo">
+                <img src="https://drive.google.com/uc?export=view&id=1ImTKtNrzt1liJAaOjyvoAVBv7CRZmpZN" class="main-logo">
+            </a>
+
+            <div class="searchh1">
+                <div class="_searchh1 _searchh2">
+                    <div class="searchh_box1">
+                        <div class="btn1 btn_common1">
+                            <i class="far fa-search iconn"></i>
+                        </div>
+                        <input type="text" class="input" placeholder="Search.." name="" id="">
+                    </div>
+                </div>
+            </div>
+
+
+            <input type="checkbox" id="tab-nav" class="tab-nav">
+            <label for="tab-nav" class="label">
+                <div class="burger"></div>
+                <div class="burger"></div>
+                <div class="burger"></div>
+            </label>
+            <ul class="content_nav">
+                <li><a routerLink="/Home"><i class="fas fa-home"></i>&nbsp;HOME</a></li>
+                <li><a routerLink="/Restaurants"><i class="fas fa-utensils"></i>&nbsp;RESTAURANTS</a></li>
+                <li><a routerLink="/Cart"><i class="fas fa-shopping-bag"></i>&nbsp;CART<sup class="c1">{{ cartCount }}</sup></a></li>
+                <li><a routerLink="/Profile"><i class="fas fa-user-circle"></i>&nbsp;PROFILE</a></li>
+                <li><a routerLink="" (click) = "logout()"><i class="fas fa-sign-out-alt"></i>&nbsp;LOGOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<router-outlet></router-outlet>

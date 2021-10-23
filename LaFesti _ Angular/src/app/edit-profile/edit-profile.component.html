@@ -1,0 +1,142 @@
+<app-header></app-header>
+<!-- <p>edit-profile works!</p> -->
+<!-- <h1>{{userData | json}}</h1> -->
+<form [formGroup]="usersForm">
+    <section class="editprofile">
+      <div class="p1">
+        <h3>EDIT PROFILE</h3>
+      </div>
+    </section>
+    <section class="content">
+      <div class="img1">
+        <img src="https://drive.google.com/uc?export=view&id=1GO2xfEUYVFFWZlwR9_YOIJC6bECQDz7u"
+        />
+      </div>
+      <div class="edit">
+        <i
+          class="fas fa-pen"
+          style="color:white"
+          formControlName="profilepic"
+        >
+        </i>
+      </div>
+      <div class="name">
+        <h3>{{userData.username}}</h3>
+      </div>
+      <div class="info">
+        <b style=" color:#ff5252">{{userData.phoneno}}</b>
+        <span id="i10" style="color:black; font-size:75px">.</span>
+        <b id="i2" style=" color:#ff5252">{{userData.email}}</b>
+      </div>
+    </section>
+    <section class="box1">
+      <div class="content">
+        <div class="content1">
+          <b class="head">Username</b>
+        </div>
+        <input
+          type="text"
+          class="container"
+          formControlName="username"
+           
+        />
+      </div>
+      <div *ngIf="username.errors">
+        <b *ngIf="username.touched && username.errors.required" style="color:red"
+          >Username Required</b
+        >
+        <b *ngIf="username.touched && username.errors?.minlength" style="color:red"
+          >MinLength Required</b
+        >
+        <b *ngIf="username.touched && username.errors?.maxlength" style="color:red"
+          >MaxLength Required</b
+        >
+      </div>
+      <div class="content">
+        <div class="content1">
+          <b class="head">Password</b>
+        </div>
+        <input
+          type="password"
+          class="container"
+          formControlName="password"
+        />
+      </div>
+      <div *ngIf="password.errors">
+        <b *ngIf="password.touched && password.errors.required" style="color:red"
+          >Password Required</b
+        >
+        <b *ngIf="password.touched && password.errors?.minlength" style="color:red"
+          >MinLength Required</b
+        >
+        <b *ngIf="password.touched && password.errors?.maxlength" style="color:red"
+          >MaxLength Required</b
+        >
+      </div>
+      <div class="content">
+        <div class="content1">
+          <b class="head">Email Address</b>
+        </div>
+        <input
+          type="email"
+          class="container"
+          formControlName="email"
+        />
+      </div>
+      <div *ngIf="email.errors">
+        <b *ngIf="email.touched && email.errors.required" style="color:red"
+          >Email Id Required</b
+        >
+        <b *ngIf="email.touched && email.errors?.pattern" style="color:red"
+          >Email Id Format is Required</b
+        >
+      </div>
+      <div class="content">
+        <div class="content1">
+          <b class="head">Phone Number</b>
+        </div>
+        <input
+          type="text"
+          class="container"
+          formControlName="phoneno"
+        />
+      </div>
+      <div *ngIf="phoneno.errors">
+        <b *ngIf="phoneno.touched && phoneno.errors.required" style="color:red"
+          >Mobile Number Required</b
+        >
+        <b *ngIf="phoneno.touched && phoneno.errors?.pattern" style="color:red"
+          >Mobile Number Length is of 10 only</b
+        >
+      </div>
+      <div class="content">
+        <div class="content1">
+          <b class="head">Address</b>
+        </div>
+        <input
+          type="text"
+          class="container"
+          formControlName="address"
+        />
+      </div>
+      <div *ngIf="address.errors">
+        <b
+          *ngIf="address.touched && address.errors.required"
+          style="color:red"
+          >Address Required</b
+        >
+      </div>
+  
+        <div class="save_btn">
+      <a
+        type="submit"
+        class="btn"
+        (click)="update()">&nbsp;<i class="fas fa-pencil-alt"></i>&nbsp;SAVE</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a
+        type="reset"
+        class="btn1" (click)="onSubmit()">&nbsp;<i class="fas fa-backward"></i>&nbsp;BACK</a>
+      </div><br/>
+    <h2 style="text-align: center; color: floralwhite;" *ngIf="upd"><i class="fas fa-check-circle"></i>&nbsp;Updated Successfully</h2>
+    </section><br/><br/>
+  </form>
+    <app-footer></app-footer>

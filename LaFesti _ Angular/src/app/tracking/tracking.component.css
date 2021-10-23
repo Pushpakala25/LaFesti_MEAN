@@ -1,0 +1,236 @@
+.container {
+    margin-top: 130px;
+    margin-bottom: 50px
+}
+
+
+.card-header:first-child {
+    border-radius: calc(0.37rem - 1px) calc(0.37rem - 1px) 0 0
+}
+
+.card-header {
+    /* padding: 0.75rem 1.25rem; */
+    margin-bottom: 0;
+    background-color: #fff;
+    
+}
+.card-header h4{
+    text-transform:capitalize;
+    font-size:36px;
+    position:relative;
+    /* display:inline-block; */
+   text-align: center;
+}
+.card-header h4:before{
+    position:absolute;
+    content:"";
+    width:100px;
+    height:2px;
+    background-color:#ff5252;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+  .card-body h5{
+      text-align: center;
+  }
+
+
+.track {
+    position: relative;
+    background-color: #ddd;
+    height: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 60px;
+    margin-top: 50px
+}
+
+.track .step {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 25%;
+    margin-top: -18px;
+    text-align: center;
+    position: relative
+}
+
+.track .step.active:before {
+    background: #ff5252
+}
+
+.track .step::before {
+    height: 7px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    top: 18px
+}
+
+.track .step.active .icon {
+    background: #ff5252;
+    color: #fff
+}
+
+.track .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-radius: 100%;
+    background: #ddd
+}
+
+.track .step.active .text {
+    font-weight: 400;
+    color: #000
+}
+
+.track .text {
+    display: block;
+    margin-top: 7px
+}
+
+
+
+/* Rating */
+
+.rating{
+    border: 2px solid #ff5252;
+    border-radius: 30px;
+    padding: 20px 100px 20px 100px;
+    display:inline-flex;
+    margin-left:35%;
+    margin-top:2%;
+    text-align: center;
+    background-color: seashell;
+    /* box-shadow: #ff5252; */
+    box-shadow: 0 10px 12px rgba(0,0,0,0.5);
+}
+
+
+.cross {
+  
+    padding: 10px;
+    color: #d6312d;
+    cursor: pointer;
+    font-size: 23px
+}
+
+.cross i {
+    margin-top: -5px;
+    cursor: pointer
+}
+
+.comment-box {
+    padding: 5px
+}
+
+.comment-area textarea {
+    resize: none;
+    border: 1px solid #ff0000
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ffffff;
+    outline: 0;
+    box-shadow: 0 0 0 1px rgb(255, 0, 0) !important
+}
+
+.send {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000
+}
+
+.send:hover {
+    color: #fff;
+    background-color: #f50202;
+    border-color: #f50202
+}
+
+.ratingstar {
+    display: inline-flex;
+    margin-top: -10px;
+    flex-direction: row-reverse
+}
+
+.ratingstar>input {
+    display: none
+}
+
+.ratingstar>label {
+    position: relative;
+    width: 28px;
+    font-size: 35px;
+    color: #ff5252;
+    cursor: pointer
+}
+
+.ratingstar>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.ratingstar>label:hover:before,
+.ratingstar>label:hover~label:before {
+    opacity: 1 !important
+}
+
+.ratingstar>input:checked~label:before {
+    opacity: 1
+}
+
+.ratingstar:hover>input:checked~label:before {
+    opacity: 0.4
+}
+
+.form-control{
+    box-shadow: inset 0px 1px 3px 1px grey;
+}
+
+.go_to_submit{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.go_to_submit button{
+    border: 1px solid;
+    box-sizing: border-box;
+    box-shadow: 0 10px 12px rgba(0,0,0,0.5);
+    border-radius: 30px; 
+    padding: 10px;   
+    background-color: #ff5252;
+    color: white;
+    font-size: 15px;
+}
+
+.go_to_submit button:hover{
+    color: #ff5252;
+    background-color: white;
+}
+
+@media screen and (max-width: 944px) {
+
+    .rating{
+        border: 2px solid #ff5252;
+        border-radius: 30px;
+        padding: 20px 100px 20px 100px;
+        display:inline-flex;
+        margin-left:12%;
+        margin-top:2%;
+        text-align: center;
+        background-color: seashell;
+        /* box-shadow: #ff5252; */
+        box-shadow: 0 10px 12px rgba(0,0,0,0.5);
+    }
+
+} 

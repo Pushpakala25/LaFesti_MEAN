@@ -1,0 +1,61 @@
+<!-- <p>tracking works!</p> -->
+<app-header></app-header>
+<div class="container">
+
+    <header class="card-header">
+        <h4>Tracking</h4>
+    </header>
+    <div class="card-body">
+        <!-- <h5>Order ID: OD45345345435</h5> -->
+
+
+        <div class="track">
+            <div class="step active"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">Order Placed</span> </div>
+            <div class="step active"> <span class="icon"> <i class="fas fa-cauldron"></i> </span> <span class="text">In Transit </span> </div>
+            <div class="step"> <span class="icon"> <i class="fas fa-biking-mountain"></i> </span> <span class="text"> Out for Delivery
+                </span> </div>
+            <div class="step"> <span class="icon"> <i class="fas fa-burger-soda"></i></span> <span class="text">Delivered</span> </div>
+        </div>
+        <hr>
+
+       
+        <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#form"> Give Feedback</button> -->
+        <div class="rating">
+            <!-- <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true"> -->
+                <!-- <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content"> -->
+                        <form [formGroup]="feedbackForm" >
+                            <div class="card-body text-center"> <img src=" https://i.imgur.com/d2dKtI7.png" height="100"
+                                    width="100%">
+                                <div class="form-group comment-box text-center">
+                                    <h2>Add a comment</h2>
+                                    <div class="ratingstar">
+                                        <input type="radio" class="form-control" formControlName="rating" value="5" id="5"><label for="5">☆</label>
+                                        <input type="radio" class="form-control" formControlName="rating" value="4" id="4"><label for="4">☆</label>
+                                        <input type="radio" class="form-control" formControlName="rating" value="3" id="3"><label for="3">☆</label>
+                                        <input type="radio" class="form-control" formControlName="rating" value="2" id="2"><label for="2">☆</label>
+                                        <input type="radio" class="form-control" formControlName="rating" value="1" id="1"><label for="1">☆</label>
+                                    </div>
+                                    <div class="form-group comment-area">
+                                        <textarea class="form-control" formControlName="comt" placeholder="what is your view?" rows="4"></textarea>
+                                    </div>
+                                    <div class="form-group go_to_submit">
+                                        <!-- <a routerLink="">&nbsp;&nbsp;Submit&nbsp;</a> -->
+                                        <button (click)="fun()" type="submit" class="btn btn-primary">
+                                            Submit
+                                          </button>
+                                    </div>
+                                    <h3 class="center-block text-center">{{ displayMessage }}</h3>
+                        
+                    </div>
+                </div>
+            </form>
+            <!-- </div>
+        </div>
+    </div> -->
+</div>
+ 
+<!-- <a routerLink="/menu" class="btn btn-warning" data-abc="true"> <i class="fa fa-chevron-left"></i> Back to orders</a> -->
+
+<app-footer></app-footer>

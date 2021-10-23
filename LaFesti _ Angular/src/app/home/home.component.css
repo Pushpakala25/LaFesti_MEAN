@@ -1,0 +1,445 @@
+/* --SLIDESHOW-- */
+
+#slider{
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+#slider figure img{
+    width: 20%;
+    float: left;
+    height: 100vh;
+}
+
+@keyframes slider{
+    0%{
+        left:0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+       left: -100%; 
+    }
+    45%{
+        left: -100%; 
+     }
+     50%{
+        left: -200%; 
+     }
+     70%{
+        left: -200%; 
+     }
+     75%{
+        left: -300%; 
+     }
+     95%{
+        left: -300%; 
+     }
+     100%{
+        left: -400%; 
+     }
+
+}
+
+
+/* --CATEGORY-- */
+
+#gallery{
+    background-color:seashell; 
+	width: 100%;
+    
+}
+.gallery-box{
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 0px;
+}
+.title-text h1{
+    text-align: center;
+    text-transform:capitalize;
+    font-size:45px;
+    position:relative;
+}
+
+.title-text h1:before{
+    position:absolute;
+    content:"";
+    width:120px;
+    height:2px;
+    background-color:#ff5252;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+.title-text p{
+    font-size: 50px;
+    color: #ff5252;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.single-gallery{
+	flex-basis: 48%;
+	text-align:center;
+	border-radius: 9px;
+	margin-bottom:30px;
+    
+	color: white;
+	position: relative;
+}
+.single-gallery img{
+    border:5px solid black;
+	width: 50%;
+    height: 100%;
+	border-radius: 7px;
+}
+
+
+.overlay{
+	width: 50%;
+	height: 100%;
+    margin-left: 163px;
+	position: absolute;
+	top:6px;
+	border-radius:7px;
+	cursor:pointer;
+	background: linear-gradient(rgba(0,0,0,0.5),red);
+	opacity:0;
+	transition: 1s;
+}
+.single-gallery:hover .overlay{
+	opacity:1;
+}
+.service-desc{
+	width: 70%;
+	position:absolute;
+	bottom:0%;
+	left:50%;
+	opacity:0;
+	transform:translateX(-50%);
+	transition:1s;
+}
+
+.service-desc h3{
+    margin-bottom: 1px;
+	font-size:40px;
+	color: white;
+}
+.single-gallery:hover .service-desc{
+	bottom:40%;
+	opacity:1;
+}
+
+@media screen and (max-width: 500px) {
+	.single-gallery{
+		flex-basis:100%;
+		margin-bottom:30px;
+		margin:center;
+	}
+	.overlay{
+        width: 50%;
+        height: 100%;
+        margin-left: 120px;
+        position: absolute;
+        top:0;
+        border-radius:7px;
+        cursor:pointer;
+        background: #ff5252;
+        opacity:0;
+        transition: 1s;
+    }
+
+    .title-text h1{
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 50px;
+        color: #ff5252;
+        margin-left: 5%;
+    }
+
+    .title-text p{
+        font-size: 30px;
+        color: black;
+        font-family: 'Dancing Script', cursive;
+        margin-bottom: 5%;
+    }
+	
+    .service-desc h3{
+        font-size: 25px;
+        margin-left: 20px;
+        margin-bottom: 30px;
+
+    }
+
+	.single-gallery:hover .service-desc{
+		bottom: 25% !important;
+	}
+}
+
+/* --RESTAURANT BUTTON-- */
+
+
+.rest-section{
+    width:100%;
+    min-height: 100vh;
+    background: #f7d08f;  
+}
+
+.container1{
+    width:80%;
+    display: block;
+    margin:auto;
+    padding-top: 100px;
+}
+
+.rest-button{
+    float: left;
+    margin-top: 50px;
+    width:55%;
+}
+
+.container1 p{
+    margin-top: 10px;
+    font-size:50px;
+  
+    color: black;
+}
+
+.container1 b{
+    color: #ff5252;
+    font-size: 80px;
+}
+
+.rest-img{
+    float:right;
+    width: 40%;
+}
+
+
+.rest-img img{
+    width:100%;
+    margin-top: 3px;
+    height: auto;
+    
+}
+
+
+.btn-1{
+    border: 2px solid #ff5252;
+    background: transparent; 
+    padding: 60px 60px 60px 60px;
+    font-size: 50px;
+    color: #ff5252;
+    border-radius: 30%;
+    cursor: pointer;
+    margin-bottom: 2%;
+    
+}
+
+.btn-1:hover{
+    color: white;
+    background: #ff5252;
+    transition: 0.8s;
+}
+
+.btn-1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: black;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+@media screen and (max-width:768px){
+    .container1{
+        width:80%;
+        display: block;
+        margin:auto;
+        padding-top: 50px;
+    }
+    .rest-button{
+        float: none;
+        width:100%;
+        display: block;
+        margin:auto;
+        margin-top: 30px;
+    }
+
+    .container1 p{
+        margin-top: 10px;
+        font-size:35px;
+        color: black;
+        text-align: center;
+    }
+    
+    .container1 b{
+        color: #ff5252;
+        font-size: 45px;
+    }
+
+
+    .rest-img{
+        float: none;
+        width:100%;
+        
+    }
+
+    .rest-img img{
+        width:100%;
+        height: auto;
+        display: block;
+        margin:auto;
+
+    }
+    
+    .btn-1{
+        border: 2px solid black;
+        background: transparent;
+        padding: 20px 20px 20px 20px;
+        font-size: 30px;
+        color: black;
+        border-radius: 30%;
+        cursor: pointer;
+        margin-bottom: 10%;
+        margin-left: 10%;
+        
+    }
+    
+}
+
+
+
+/* --OUTLETS-- */
+
+
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.out-text h1{
+    text-transform:capitalize;
+    font-size:45px;
+    position:relative;
+    text-align: center;  
+}
+
+.out-text h1:before{
+    position:absolute;
+    content:"";
+    width:120px;
+    height:2px;
+    background-color:#ff5252;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+.out-text p{
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    color: #ff5252;
+    text-align: center;
+}
+
+.container .hex{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    
+    margin: 70px 10px 20px;
+}
+
+.container .hex::before{
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    height: 60px;
+    background: radial-gradient(rgba(0,0,0,0.15),transparent,transparent);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.container .hex:hover::before{
+
+    opacity: 0.8;
+    transform: scale(0.8);
+}
+
+
+.container .hex .draw{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    transition: 0.5s;
+}
+
+.container .hex:hover .draw{
+    transform: translateY(-30px);
+}
+
+.container .hex .draw img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.container .hex .draw .out-content{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 6px; */
+    text-align: center;
+    background: linear-gradient(45deg,#ff5252,orange);
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .hex:hover .draw .out-content{
+        opacity: 1;
+        
+}
+
+@media screen and (max-width:768px){
+    .out-text h1{
+        font-size: 50px;
+    }
+    .out-text p{
+        font-size: 30px;
+        font-family: 'Dancing Script', cursive;
+        color: black;
+    }
+}

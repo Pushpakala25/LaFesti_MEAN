@@ -1,0 +1,78 @@
+<app-loginheader></app-loginheader>
+<div class="loginpart">
+  <div class="cstxtt">
+    <div class="stxtt">
+      <div class="cvtxtt">
+        <ul>
+          <li class="ltt1">
+            <div class="lttxt">Yummy food which will please you time, money and tummy.</div>
+          </li>
+          <li class="ltt2">
+            <div class="lttxt">Don't Starve, Just Order.</div>
+          </li>
+          <li class="ltt3">
+            <div class="lttxt">Act out against hunger.</div>
+          </li>
+          <li class="ltt4">
+            <div class="lttxt">Let deliciousness twirl in your mouth.</div>
+          </li>
+          <li class="ltt5">
+            <div class="lttxt">Eat as much as you want not can.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="lwrapper">
+    <div class="txt">
+      <div class="title login">
+        Welcome
+      </div>
+    </div>
+    <div class="containerlr">
+      <div class="sc">
+        <input type="radio" name="slide" id="login">
+        <input type="radio" name="slide" id="signup" checked>
+        <label for="login" class="slide login" routerLink="">Login</label>
+        <label for="signup" class="slide signup">Register</label>
+        <div class="st"></div>
+      </div>
+      <div class="formlr">
+        <form [formGroup]="signinform" class="signup">
+          <div class="fieldlr rr">
+            <input type="text" placeholder="First Name" style="width: 159px; margin-right: 2px;"
+              formControlName="firstname" >
+            <input type="text" placeholder="Last Name" style="width: 159px;" formControlName="lastname">
+            </div><br/><br />
+          <div class="fieldlr rr">
+            <input type="text" placeholder="Username" style="width: 159px; margin-right: 2px;"
+              formControlName="username">
+            <input type="text" placeholder="Phone No." style="width: 159px;" formControlName="phoneno">
+          </div><br /><br />
+          <div class="fieldlr rr">
+            <input type="text" placeholder="Email ID" formControlName="email">
+          </div><br /><br />
+          <div class="fieldlr rr">
+            <input type="password" placeholder="Set password" formControlName="password"
+              style="width: 159px; margin-right: 2px;">
+            <input type="password" placeholder="Confirm Password" formControlName="confirmpassword"
+              style="width: 159px;">
+          </div>
+          <div class="fieldlr btnlr" >
+            <div class="btnlr-layer"></div>
+            <input type="submit" (click)="reguser()" value="Signup" >
+          </div>
+          <div class="nacc" *ngIf="unmatch">
+            <i class="fas fa-times-circle"></i>Passwords Dont Match!!!
+        </div>
+        <div class="nacc" *ngIf="status">
+          <i class="fas fa-times-circle"></i>Email ID or Phone No Already Exists!!!
+      </div>
+      <div class="nacc" *ngIf="success">
+        <i class="fas fa-check-circle"></i>&nbsp;Registration Successful!!<a routerLink="">Click here to Login!</a>
+    </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

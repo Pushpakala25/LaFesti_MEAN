@@ -1,0 +1,41 @@
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+<div class="hdlr">
+    <div class="ht"><img id="logo" src="https://drive.google.com/uc?export=view&id=1ImTKtNrzt1liJAaOjyvoAVBv7CRZmpZN" />
+        <div class="cstxtt">
+            <div class="stxtt">
+                <div class="cvtxtt">
+                    <ul>
+                        <li class="ltt1">
+                            <div class="lttxt">Yummy food which will please you time, money and tummy.</div>
+                        </li>
+                        <li class="ltt2">
+                            <div class="lttxt">Don't Starve, Just Order.</div>
+                        </li>
+                        <li class="ltt3">
+                            <div class="lttxt">Act out against hunger.</div>
+                        </li>
+                        <li class="ltt4">
+                            <div class="lttxt">Let deliciousness twirl in your mouth.</div>
+                        </li>
+                        <li class="ltt5">
+                            <div class="lttxt">Eat as much as you want not can.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search">
+        <div class="_searchlr _searchlr1">
+            <div class="search_boxlr" [formGroup]="addressform">
+                <div class="btlr btlr_common">
+                    <i id="lmap" class='fas fa-map-marker-alt'></i><i class="fas fa-check" (click) = "addadd()"></i>
+                </div>
+                <input type="text" class="input" placeholder="Enter Your Location..." formControlName="address">
+            </div>
+            <div class="locent" *ngIf = "status"><i class="fas fa-check-circle"></i>&nbsp;Location Added Successfully!!</div>
+        </div>
+    </div>
+</div>
